@@ -12,12 +12,7 @@ function Preload() {
 }
 
 function Create() {
-    texto = this.add.text(150, 150, "1", { fontStyle: 'bold', fontSize: "32px" });
     this.add.image(150,150,'Dado_Lado1');
-    this.add.image(150,150,'Dado_Lado2');
-    this.add.image(150,150,'Dado_Lado3');
-    this.add.image(150,150,'Dado_Lado4');
-    this.add.image(150,150,'Dado_Lado5');
     
     this.input.on('pointerdown', AdicionarValor);
     this.input.on('pointerup', DefinirValor);
@@ -42,7 +37,7 @@ function DefinirValor() {
 function DefinirLadoDoDado(Valor) {
     switch (Valor) {
         case 1:
-            
+            remove('Dado_Lado1');
             break;
     
         default:
