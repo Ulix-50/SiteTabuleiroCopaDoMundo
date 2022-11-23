@@ -23,10 +23,11 @@ function Update() {
 }
 
 function AdicionarValor() {
-    valor = Math.floor(Math.random() * 7);
+    valor = Math.floor(Math.random() * 7);    
     if (valor == 0) {
         valor = 1;
     }
+    DefinirLadoDoDado(valor)
     texto.setText(valor);
 }
 
