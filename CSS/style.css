@@ -1,0 +1,9 @@
+body
+{
+    background: linear-gradient(to bottom right,#850f3dff, #570a28ff);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Qatar2022', sans-serif;
+    color: white;
+}
