@@ -20,6 +20,7 @@ const game = new Phaser.Game(config);
 
 var valor = 1;
 var ImagemDado;
+var NumeroJogadas = 0;
 
 function Init() {
 }
@@ -68,6 +69,7 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
         case 2:
             ApagarImagem_Dado(DadoLado1);
@@ -76,6 +78,7 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
         case 3:
             ApagarImagem_Dado(DadoLado1);
@@ -84,6 +87,7 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
         case 4:
             ApagarImagem_Dado(DadoLado1);
@@ -92,6 +96,7 @@ function DefinirLadoDoDado(Valor) {
             CarregarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
         case 5:
             ApagarImagem_Dado(DadoLado1);
@@ -100,6 +105,7 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             CarregarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
         case 6:
             ApagarImagem_Dado(DadoLado1);
@@ -108,6 +114,7 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             CarregarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas()
             break;
         default:
             CarregarImagem_Dado(DadoLado1);
@@ -116,16 +123,27 @@ function DefinirLadoDoDado(Valor) {
             ApagarImagem_Dado(DadoLado4);
             ApagarImagem_Dado(DadoLado5);
             ApagarImagem_Dado(DadoLado6);
+            AdicionarNumeroDeJogadas();
             break;
     }
 }
 
 function CarregarImagem_Dado(LadoDado) {
     LadoDado.visible = true;
+    console.log(valor + " foi selecionado");
     
 }
 
 function ApagarImagem_Dado(LadoDado) {
     LadoDado.visible = false;
     
+}
+function AtualizarNumeroJogadas() {
+    this.document.getElementById("Jogadas").innerHTML = "O dado foi jogado: " + NumeroJogadas + " vezes.";
+    console.log("Mudou o texto!");
+}
+
+function AdicionarNumeroDeJogadas() {
+    NumeroJogadas++;
+    AtualizarNumeroJogadas();
 }
