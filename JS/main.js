@@ -122,7 +122,6 @@ function DefinirLadoDoDado(Valor) {
 
 function CarregarImagem_Dado(LadoDado) {
     LadoDado.visible = true;
-    console.log(valor + " foi selecionado");
     
 }
 
